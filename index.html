@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>My Page</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.minn.css">
+	<link rel="stylesheet" href="css/styless.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'> 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/biodata.js"></script>
+	<script type="text/javascript" src="js/splash.js"></script>
+	<script type="text/javascript"src="js/camera.js"></script>
+	  
+</head>
+<body >
+<div class="splash fade-in">
+		<h1 class="splash-title fade-in">SPLASH SCREEN</h1>
+		<a href="#" class="splash-arrow fade-in"><img src="img/down-arrow.png" alt="" /></a>
+	</div>
+<div data-role="page" id="pageone" class="wrapper";>
+	
+        <div data-role="header" data-position="fixed">
+        	<h1>MDP 2017</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pageone" data-icon="home">Home</a></li>
+					<li><a href="#cameras" data-icon="camera">Camera</a></li>
+					<li><a href="#aboutpage" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div><!-- /header -->
+ 
+        <div role="main" class="ui-content">
+        	<center><img src="img/hop.png" style="width:250px;height:250px"><center> 
+        	
+        	<a href="#pagetwo" data-role="button" >Start</a> <!-- ketika tombol start diklik maka akan berganti halaman dengan nama halaman #pagetwo -->			</div> 
+        <!-- /content -->
+		
+		
+        <div data-role="footer" data-position="fixed">
+        	<h4>Aplikasi Modul 1</h4> 
+        </div>
+	</div>
+<div data-role="page" id="cameras" >
+		<div data-role="header" data-position="fixed">
+        	<h1>MDP 2017</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pageone" data-icon="home">Home</a></li>
+					<li><a href="#cameras" data-icon="camera">Camera</a></li>
+					<li><a href="#aboutpage" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div><!-- /page -->
+
+	<div class="container">
+	
+	<div class="app">
+
+		<a href="#" id="mulaikamera" class="visible"></a>
+		<video id="kamerastream"></video>
+		<img id="jepret">
+
+		<p id="error-message"></p>
+
+		<div class="controls">
+		<!-- mengambil gambar pada kamera -->	
+			<a href="#" id="ambilfoto" title="ambil Photo"><i class="material-icons">KAMERA</i></a>
+			  
+		</div>
+		<canvas></canvas>
+	</div>
+
+	</div>
+	
+        <div data-role="footer" data-position="fixed">
+        	<h4>Aplikasi Modul 1</h4> 
+        </div>
+	</div>
+	<div data-role="page" id="aboutpage" >
+		<div data-role="header" data-position="fixed" >
+        	<h1>MDP 2017</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#pageone" data-icon="home">Home</a></li>
+					<li><a href="#cameras" data-icon="camera">Camera</a></li>
+					<li><a href="#aboutpage" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div><!-- /header -->
+
+	 	<div role="main" class="ui-content" style="text-align:center">
+        	<p>Praktikum MDP Kelompok 10 </p>
+        </div><!-- /content -->
+
+        <div data-role="footer" data-position="fixed">
+        	<h4>Aplikasi Modul 1</h4> 
+        </div>
+	</div>
+<div data-role="page" id="pagetwo">
+		<div data-role="header" data-position="fixed">
+			<a href="#pageone" class="ui-btn ui-icon-home ui-btn-icon-left" style="background-color:#ffdd33">Back</a>
+        	<h1>MDP 2017</h1>
+		</div><!-- /header -->
+	 	<div role="main" class="ui-content">
+        	<center><h3 class="ui-title">Identity Form</h3></center>
+			
+			<!-- label untuk textbox name -->
+			<label for="nama">Nama</label>
+				
+				<!-- textbox untuk input nama -->
+				<input type="text" name="nama" id="nama" value="">
+			
+			<!-- fieldset radio button -->
+			<fieldset name="sex" id="sex" data-role="controlgroup" data-type="horizontal">
+				<legend>Jenis Kelamin</legend>
+				
+				<!-- radio button untuk input sex -->
+				<input type="radio" name="r1" id="r1a" value="Laki-laki">
+					<label for="r1a">Laki-laki</label>
+				<input type="radio" name="r1" id="r1b" value="Perempuan">
+					<label for="r1b">Perempuan</label>
+					
+			</fieldset>
+			
+			<!-- fieldset checkbox -->
+			<fieldset name="interest" id="interest" data-role="controlgroup">
+				<legend>Hobi</legend>
+				
+				<!-- checkbox untuk input interest -->
+				<input type="checkbox" name="c1" id="c1" value="Basket">
+					<label for="c1">Basket</label>
+				<input type="checkbox" name="c2" id="c2" value="Futsal">
+					<label for="c2">Futsal</label>
+				<input type="checkbox" name="c3" id="c3" value="Volly">
+					<label for="c3">Volly</label>
+					
+			</fieldset>
+			
+			<!--- membangun pop up yang akan tampil di halaman ini -->
+			
+			<!-- button mengeluarkan pop up --> <!-- terdapat fungsi javascript yaitu reader() -->
+			<a href="#popupBasic" data-role="button" data-position-to="window" data-rel="popup" onclick="reader()">Read</a>
+
+			<div data-role="popup" id="popupBasic">
+				<div data-role="header">
+					<h1>Your Identity</h1>
+				</div>
+				<div data-role="main" class="ui-content">
+				<p id="popup-reader"><p>
+				<a href="#" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left" data-rel="back">Back</a>
+				</div>
+			</div>
+        </div><!-- /content -->
+		
+	</div>
+
+
+</body>
+</html>
